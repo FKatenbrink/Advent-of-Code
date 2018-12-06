@@ -1,9 +1,9 @@
 import sys
 
 
-def test_day2_1():
-    assert day2_1("dabAcCaCBAcCcaDA") == 10
-    assert day2_1("abBA") == 0
+def test_day5_1():
+    assert day5_1("dabAcCaCBAcCcaDA") == 10
+    assert day5_1("abBA") == 0
     assert react(["a", "A"]) == []
     assert react(["a", "B", "b", "A"]) == ["a", "A"]
     print("All tests successful.")
@@ -23,7 +23,7 @@ def react(polymer):
     return polymer
 
 
-def day2_1(input):
+def day5_1(input):
     polymer = list(input)
     old_len_polymer = len(polymer)
     while True:
@@ -37,6 +37,6 @@ def day2_1(input):
 if __name__ == "__main__":
     if len(sys.argv) == 2:
         with open(sys.argv[1]) as file:
-            print(f"Result for file input: {day2_1(file.read().strip())}")
+            print(f"Result for file input: {day5_1(file.read().strip())}")
     else:
-        test_day2_1()
+        test_day5_1()
