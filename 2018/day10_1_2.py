@@ -2,8 +2,8 @@ import sys
 import re
 
 
-def test_day9_1():
-    day9_1(
+def test_day10_1_2():
+    day10_1_2(
         "position=< 9,  1> velocity=< 0,  2>\nposition=< 7,  0> velocity=<-1,  0>\nposition=< 3, -2> velocity=<-1,  1>\nposition=< 6, 10> velocity=<-2, -1>\nposition=< 2, -4> velocity=< 2,  2>\nposition=<-6, 10> velocity=< 2, -2>\nposition=< 1,  8> velocity=< 1, -1>\nposition=< 1,  7> velocity=< 1,  0>\nposition=<-3, 11> velocity=< 1, -2>\nposition=< 7,  6> velocity=<-1, -1>\nposition=<-2,  3> velocity=< 1,  0>\nposition=<-4,  3> velocity=< 2,  0>\nposition=<10, -3> velocity=<-1,  1>\nposition=< 5, 11> velocity=< 1, -2>\nposition=< 4,  7> velocity=< 0, -1>\nposition=< 8, -2> velocity=< 0,  1>\nposition=<15,  0> velocity=<-2,  0>\nposition=< 1,  6> velocity=< 1,  0>\nposition=< 8,  9> velocity=< 0, -1>\nposition=< 3,  3> velocity=<-1,  1>\nposition=< 0,  5> velocity=< 0, -1>\nposition=<-2,  2> velocity=< 2,  0>\nposition=< 5, -2> velocity=< 1,  2>\nposition=< 1,  4> velocity=< 2,  1>\nposition=<-2,  7> velocity=< 2, -2>\nposition=< 3,  6> velocity=<-1, -1>\nposition=< 5,  0> velocity=< 1,  0>\nposition=<-6,  0> velocity=< 2,  0>\nposition=< 5,  9> velocity=< 1, -2>\nposition=<14,  7> velocity=<-2,  0>\nposition=<-3,  6> velocity=< 2, -1>",
         3)
 
@@ -57,7 +57,7 @@ def shift_points(points):
     return points
 
 
-def day9_1(input, seconds=100):
+def day10_1_2(input, seconds=100):
     points = [parse_input(i) for i in input.split("\n")]
     seconds = 0
     while True:
@@ -78,6 +78,6 @@ def day9_1(input, seconds=100):
 if __name__ == "__main__":
     if len(sys.argv) == 2:
         with open(sys.argv[1]) as file:
-            print(f"Result for file input: {day9_1(file.read().strip())}")
+            print(f"Result for file input: {day10_1_2(file.read().strip())}")
     else:
-        test_day9_1()
+        test_day10_1_2()
